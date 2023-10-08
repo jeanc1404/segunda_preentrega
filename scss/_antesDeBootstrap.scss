@@ -1,25 +1,35 @@
+/* Default */
 * {
     margin: 0;
     padding: 0;
 }
+/* Variables */
+$colorFondo: blueviolet;
+$width400: 400px;
+
+/* Mixin */
+@mixin margin10px () {
+    margin: 10px 10px 10px 10px;
+}
+
+@mixin propiedadesImg ($ancho , $borderR , $marginR , $maxWidth) {
+    width: $ancho;
+    border-radius: $borderR;
+    margin: $marginR;
+    max-width: $maxWidth;
+}
+
+/* CSS */
 
 .imagen-logo {
-    width: 80px;
-    border-radius: 45%;
-    margin-right: 10px;
+    @include propiedadesImg(20%,45%,10px,20%)
+
 }
-/* header {
-    padding-left: 10px;
-    text-decoration: none;
-    background-color:blanchedalmond;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 0;
-} */
+
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: blueviolet;
+    font-family: 'Roboto', sans-serif;  
+    background-color: $colorFondo;
+    overflow-x: hidden;
 }
 
 /* NUEVO*/
@@ -33,25 +43,25 @@ body {
 .container .col-md-4 {
     flex: 1;
     margin: 10px;
-}
+} 
 
 
 .boxItem {
-    margin: 10px 10px;
+    @include margin10px();
     gap: 20px;
 }
 
 .boxItem img {
     width: 300px;
     border-radius: 1%;
-    margin: 15px 15px 15px 15px;
+    @include margin10px();
 
 }
 
 .boxItem ul {
     font-size: 18px;
     text-align: left;
-    margin: 10px 10px 10px 10px;
+    @include margin10px();
     padding: 10px 10px 10px 10px;
 }
 
@@ -68,20 +78,20 @@ h4 {
     margin: 1px 1px 1px 1px;
     color: brown;
     border-color: black;
-    margin: 10px 10px 10px 10px;
+    @include margin10px();
     
 }
 
 h1 {
-    margin: 10px 10px 10px 10px;
+    @include margin10px();
 }
 
 h2 {
-    margin: 10px 10px 10px 10px;
+    @include margin10px();
 }
 
 p {
-    margin: 10px 10px 10px 10px;
+    @include margin10px();
     
 }
 
@@ -94,6 +104,11 @@ p {
 
 a {
     text-decoration: none;
+    outline: none;
+}
+
+ul, ol, li {
+    list-style: none;
 }
 
 .logoWhatsapp {
@@ -105,21 +120,21 @@ a {
 }
 
 .contactForm {
-    margin: 10px 10px 10px 10px;
+    @include margin10px();
     width: 200px
 }
 
 .contactForm input {
-    width: 400px;
+    width: $width400;
 
 }
 
 .contactForm textarea {
-    width: 400px;
+    width: $width400;
 }
 
 .historyPhoto {
-    width: 450px;
+    width: $width400;
 
 }
 
@@ -133,7 +148,7 @@ a {
 }
 
 .mapLocation {
-    margin: 10px 10px 10px 10px;
+    @include margin10px();
     border-radius: 1%;
 }
 
@@ -141,4 +156,43 @@ a {
     gap: 10px;
     font-size: 40px;
     font-weight: 500;
+}
+
+header a {
+    max-width: 30%;
+}
+
+@media (max-width: 500) {
+    header {
+        color: red;
+        background-color: yellow;
+    }
+    .tituloNav {
+        gap: 1px;
+        font-size: 20px;
+        background-color: red;
+    }
+}
+
+footer a {
+        text-decoration: none;
+        outline: none;
+}
+
+.list-footer ul {
+    list-style-type: none;
+}
+
+.list-footer a {
+    text-decoration: none;
+    color: black;
+}
+
+.list-footer a:hover {
+    border-bottom: 1px solid;
+}
+
+.contact-form {
+    display: flex;
+    justify-content: center;
 }

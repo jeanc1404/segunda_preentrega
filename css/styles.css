@@ -1,26 +1,23 @@
+/* Default */
 * {
   margin: 0;
   padding: 0;
 }
 
+/* Variables */
+/* Mixin */
+/* CSS */
 .imagen-logo {
-  width: 80px;
+  width: 20%;
   border-radius: 45%;
-  margin-right: 10px;
+  margin: 10px;
+  max-width: 20%;
 }
 
-/* header {
-    padding-left: 10px;
-    text-decoration: none;
-    background-color:blanchedalmond;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 0;
-} */
 body {
   font-family: "Roboto", sans-serif;
   background-color: blueviolet;
+  overflow-x: hidden;
 }
 
 /* NUEVO*/
@@ -37,14 +34,14 @@ body {
 }
 
 .boxItem {
-  margin: 10px 10px;
+  margin: 10px 10px 10px 10px;
   gap: 20px;
 }
 
 .boxItem img {
   width: 300px;
   border-radius: 1%;
-  margin: 15px 15px 15px 15px;
+  margin: 10px 10px 10px 10px;
 }
 
 .boxItem ul {
@@ -90,6 +87,11 @@ p {
 
 a {
   text-decoration: none;
+  outline: none;
+}
+
+ul, ol, li {
+  list-style: none;
 }
 
 .logoWhatsapp {
@@ -114,7 +116,7 @@ a {
 }
 
 .historyPhoto {
-  width: 450px;
+  width: 400px;
 }
 
 .navMap {
@@ -135,6 +137,44 @@ a {
   gap: 10px;
   font-size: 40px;
   font-weight: 500;
+}
+
+header a {
+  max-width: 30%;
+}
+
+@media (max-width: 500) {
+  header {
+    color: red;
+    background-color: yellow;
+  }
+  .tituloNav {
+    gap: 1px;
+    font-size: 20px;
+    background-color: red;
+  }
+}
+footer a {
+  text-decoration: none;
+  outline: none;
+}
+
+.list-footer ul {
+  list-style-type: none;
+}
+
+.list-footer a {
+  text-decoration: none;
+  color: black;
+}
+
+.list-footer a:hover {
+  border-bottom: 1px solid;
+}
+
+.contact-form {
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
