@@ -32,18 +32,11 @@ body {
     overflow-x: hidden;
 }
 
-/* NUEVO*/
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+.row {
+    max-width: 100%;
+    @include margin10px();
 }
 
-.container .col-md-4 {
-    flex: 1;
-    margin: 10px;
-} 
 
 
 .boxItem {
@@ -96,18 +89,28 @@ p {
 }
 
 
-.listaNav li {
+/* .listaNav li {
     display: inline;
     margin-right: 10px;
     text-align: center;
 }
+ */
 
-a {
-    text-decoration: none;
-    outline: none;
+
+.nav-link {
+    color: $colorFondo;
+    display: inline;
+    font-weight:bolder;
 }
 
-ul, ol, li {
+.nav-item {
+    a:hover {
+        color: black;
+        text-decoration: underline;
+        }
+    }
+
+ul, ol {
     list-style: none;
 }
 
@@ -124,13 +127,14 @@ ul, ol, li {
     width: 200px
 }
 
-.contactForm input {
-    width: $width400;
-
-}
-
-.contactForm textarea {
-    width: $width400;
+.contactForm {
+    align-content: center;
+    input {
+    width: 100%;
+    }
+    textarea {
+    width: 100%;
+    }
 }
 
 .historyPhoto {
@@ -162,18 +166,6 @@ header a {
     max-width: 30%;
 }
 
-@media (max-width: 500) {
-    header {
-        color: red;
-        background-color: yellow;
-    }
-    .tituloNav {
-        gap: 1px;
-        font-size: 20px;
-        background-color: red;
-    }
-}
-
 footer a {
         text-decoration: none;
         outline: none;
@@ -196,3 +188,57 @@ footer a {
     display: flex;
     justify-content: center;
 }
+
+.specialBtn {
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    border: none;
+    padding: 16px 32px;
+    color: azure;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+}
+/* 
+.specialBtn:hover::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, red, blue, deeppink, blue, red, blue, deeppink, blue);
+        background-size: 800%;
+        border-radius: 12px;
+        filter: blur(8px);
+        animation: glowing 20s linear infinite;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+ */
+@media screen and (max-width: 500) {
+    .navbar {
+        color: red;
+        background-color: yellow;
+    }
+    .contenedor-navbar {
+        gap: 1px;
+        font-size: 25px;
+        background-color: red;
+
+    }
+}
+
+
