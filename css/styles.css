@@ -71,113 +71,112 @@ p {
   margin: 10px 10px 10px 10px;
 }
 
-/* .listaNav li {
+/* 
+.listaNav a, i {
     display: inline;
     margin-right: 10px;
     text-align: center;
 }
+
  */
-.nav-link {
-  color: blueviolet;
-  display: inline;
-  font-weight: bolder;
+/* .nav-link {
+    color: $colorFondo;
+    display: inline;
+    font-weight:bolder;
 }
 
-.nav-item a:hover {
-  color: black;
-  text-decoration: underline;
-}
+.nav-item {
+    a:hover {
+        color: black;
+        text-decoration: underline;
+        }
+    }
 
 ul, ol {
-  list-style: none;
+    list-style: none !important;
 }
 
 .logoWhatsapp {
-  width: 50px;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  margin: 5px 5px 5px 5px;
+    width: 50px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    margin: 5px 5px 5px 5px;
 }
 
 .contactForm {
-  margin: 10px 10px 10px 10px;
-  width: 200px;
+    @include margin10px();
+    width: 200px
 }
 
 .contactForm {
-  align-content: center;
-}
-.contactForm input {
-  width: 100%;
-}
-.contactForm textarea {
-  width: 100%;
+    align-content: center;
+    input {
+    width: 100%;
+    }
+    textarea {
+    width: 100%;
+    }
 }
 
 .historyPhoto {
-  width: 400px;
+    width: $width400;
+
 }
 
-.navMap {
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  border-radius: 8%;
-  height: 150px;
-  width: 320px;
+.navMap{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-radius: 8%;
+    height: 150px;
+    width: 320px;
 }
 
 .mapLocation {
-  margin: 10px 10px 10px 10px;
-  border-radius: 1%;
+    @include margin10px();
+    border-radius: 1%;
 }
 
-.tituloNav {
-  gap: 10px;
-  font-size: 40px;
-  font-weight: 500;
-}
 
 header a {
-  max-width: 30%;
+    max-width: 30%;
 }
 
 footer a {
-  text-decoration: none;
-  outline: none;
+        text-decoration: none !important;
+        outline: none;
 }
 
 .list-footer ul {
-  list-style-type: none;
+    list-style-type: none !important;
 }
 
 .list-footer a {
-  text-decoration: none;
-  color: black;
+    text-decoration: none I !important;
+    color: black;
 }
 
 .list-footer a:hover {
-  border-bottom: 1px solid;
+    border-bottom: 1px solid;
 }
 
 .contact-form {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .specialBtn {
-  background-color: rgb(0, 0, 0);
-  cursor: pointer;
-  border: none;
-  padding: 16px 32px;
-  color: azure;
-  font-size: 24px;
-  font-weight: bold;
-  position: relative;
-  border-radius: 12px;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    border: none;
+    padding: 16px 32px;
+    color: azure;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
 }
-
 /* 
 .specialBtn:hover::before{
         content: "";
@@ -206,16 +205,67 @@ footer a {
     }
 }
  */
-@media screen and (max-width: 500) {
+@media screen and (max-width: 768px) {
+  .tituloNav {
+    margin-top: 1%;
+    font-size: 35px;
+    font-weight: 500;
+  }
+  .imagen-logo {
+    width: 80px;
+  }
   .navbar {
-    color: red;
     background-color: yellow;
   }
   .contenedor-navbar {
     gap: 1px;
     font-size: 25px;
-    background-color: red;
   }
+  .listaNav {
+    display: block;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .tituloNav {
+    margin-top: 1%;
+    font-size: 45px;
+    font-weight: 500;
+  }
+  .imagen-logo {
+    width: 150px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tituloNav {
+    margin-top: 1%;
+    font-size: 80px;
+    font-weight: 500;
+  }
+  .imagen-logo {
+    width: 300px;
+  }
+}
+.color-nav {
+  color: blueviolet;
+}
+
+ul {
+  list-style: none !important;
+}
+
+footer {
+  margin-top: 5%;
+}
+footer a {
+  color: black;
+}
+
+p {
+  color: black;
+}
+
+.form-control {
+  max-width: 60%;
 }
 
 /*# sourceMappingURL=styles.css.map */

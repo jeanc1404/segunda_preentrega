@@ -88,16 +88,16 @@ p {
     
 }
 
-
-/* .listaNav li {
+/* 
+.listaNav a, i {
     display: inline;
     margin-right: 10px;
     text-align: center;
 }
+
  */
 
-
-.nav-link {
+/* .nav-link {
     color: $colorFondo;
     display: inline;
     font-weight:bolder;
@@ -111,7 +111,7 @@ p {
     }
 
 ul, ol {
-    list-style: none;
+    list-style: none !important;
 }
 
 .logoWhatsapp {
@@ -156,27 +156,22 @@ ul, ol {
     border-radius: 1%;
 }
 
-.tituloNav {
-    gap: 10px;
-    font-size: 40px;
-    font-weight: 500;
-}
 
 header a {
     max-width: 30%;
 }
 
 footer a {
-        text-decoration: none;
+        text-decoration: none !important;
         outline: none;
 }
 
 .list-footer ul {
-    list-style-type: none;
+    list-style-type: none !important;
 }
 
 .list-footer a {
-    text-decoration: none;
+    text-decoration: none I !important;
     color: black;
 }
 
@@ -228,17 +223,69 @@ footer a {
     }
 }
  */
-@media screen and (max-width: 500) {
+@media screen and (max-width: 768px) {
+    .tituloNav {
+        margin-top: 1%;
+        font-size: 35px;
+        font-weight: 500;
+    }
+    .imagen-logo{
+        width: 80px;
+    }
     .navbar {
-        color: red;
         background-color: yellow;
     }
     .contenedor-navbar {
         gap: 1px;
         font-size: 25px;
-        background-color: red;
-
+    }
+    .listaNav {
+        display: block;
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .tituloNav {
+        margin-top: 1%;
+        font-size: 45px;
+        font-weight: 500;
+    }
+    .imagen-logo{
+        width: 150px;
+    }
 
+}
+
+@media screen and (min-width: 1200px) {
+    .tituloNav {
+        margin-top: 1%;
+        font-size: 80px;
+        font-weight: 500;
+    }
+    .imagen-logo{
+        width: 300px;
+    }
+}
+
+.color-nav {
+    color: blueviolet;
+}
+
+ul {
+    list-style: none !important;
+}
+
+footer {
+    margin-top: 5%;
+    a {
+    color: black;
+}
+}
+
+p {
+    color: black;
+}
+
+.form-control {
+    max-width: 60%;
+}
