@@ -7,6 +7,10 @@
 /* Variables */
 /* Mixin */
 /* CSS */
+ul {
+  list-style: none !important;
+}
+
 .imagen-logo {
   width: 20%;
   border-radius: 45%;
@@ -247,10 +251,6 @@ footer a {
 }
 .color-nav {
   color: blueviolet;
-}
-
-ul {
-  list-style: none !important;
 }
 
 footer {
